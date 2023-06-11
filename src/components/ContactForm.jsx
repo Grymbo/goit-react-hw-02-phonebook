@@ -2,15 +2,20 @@ import React,{ Component } from "react";
 import styles from "../styles/contactForm.module.css";
 
 class ContactForm extends Component {
+
   render() {
     const { name, number, saveData, handleSubmit } = this.props;
+    
     return (
       <>
         <div className={styles.form__container}>
           <h1>Phonebook</h1>
+          
           <form className={styles.form} onSubmit={handleSubmit}>
+            
             <div className={styles.input__container}>
               <label htmlFor="name">Nombre:</label>
+              
               <input
                 className={styles.input}
                 type="text"
@@ -21,6 +26,7 @@ class ContactForm extends Component {
                 onChange={saveData}
               />
             </div>
+            
             <div className={styles.input__container}>
               <label htmlFor="number">Number:</label>
               <input
@@ -33,9 +39,9 @@ class ContactForm extends Component {
                 onChange={saveData}
               />
             </div>
+            
             <button>Add contact</button>
-          </form>
-          
+          </form>  
         </div>
       </>
     );
